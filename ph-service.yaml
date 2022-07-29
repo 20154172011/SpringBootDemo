@@ -1,0 +1,14 @@
+APIVersion: v1
+kind: Service
+Metadata:
+  name: ph-service
+spec:
+  type: NodePort
+  ports:
+  - name: ph
+    port: 8081
+    nodePort: 31002
+    targetPort: 8081
+    protocol: TCP
+  selector:
+    app: ph

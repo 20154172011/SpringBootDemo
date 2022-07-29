@@ -1,0 +1,22 @@
+APIVersion: v1
+kind: ReplicationController
+Metadata:
+  name: ph-rc
+spec:
+  replicas: 1
+  template:
+    Metadata:
+      labels:
+        app: ph
+    spec:
+      imagePullSecrets:
+        - name: harborsecret
+      containers:
+        - name: ph
+          image: 192.168.149.21/java/ph:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8081
+          env:
+            - name: key
+              value: "value"
