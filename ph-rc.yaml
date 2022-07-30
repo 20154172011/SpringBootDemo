@@ -1,11 +1,11 @@
-APIVersion: v1
+apiVersion: v1
 kind: ReplicationController
-Metadata:
+metadata:
   name: ph-rc
 spec:
   replicas: 1
   template:
-    Metadata:
+    metadata:
       labels:
         app: ph
     spec:
@@ -13,7 +13,7 @@ spec:
         - name: harborsecret
       containers:
         - name: ph
-          image: 192.168.149.21/java/ph:latest
+          image: 192.168.149.20/java/spring-boot-demo-0.0.1-snapshot.jar:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 8081
