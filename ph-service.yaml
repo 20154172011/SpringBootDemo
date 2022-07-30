@@ -1,13 +1,13 @@
-APIVersion: v1
+apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: ph-service
 spec:
   type: NodePort
   ports:
   - name: ph
     port: 8081
-    nodePort: 31002
+    nodePort: 31111
     targetPort: 8081
     protocol: TCP
   selector:
