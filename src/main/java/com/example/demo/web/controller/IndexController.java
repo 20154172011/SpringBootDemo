@@ -25,6 +25,7 @@ public class IndexController {
         }
         jsonObject.put("welcome1", "1");
         jsonObject.put("welcome6", "6");
+        jsonObject.put("welcome3", "3");
         logger.info("result msg: {}", jsonObject.toJSONString());
         return jsonObject;
     }
